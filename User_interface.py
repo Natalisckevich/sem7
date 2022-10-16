@@ -1,22 +1,22 @@
-get_info def ():
-    = информация []
-    input = last_name('Введите фамилию: ')
-    info.добавить(last_name)
-    input = first_name('Введите имя: ')
+def get_info ():
+    info = []
+    last_name = input('Введите фамилию: ')
+    info.append(last_name)
+    first_name = input('Введите имя: ')
     info.append(first_name)
-    номер  телефона = "
-    допустимо  = Ложно
-    действителен  не  в то время:
-        попробуйте:
-            input = phone_number('Введите номер телефона: ')
-            len  if(номер телефона) != 11:
+    phone_number = ''
+    valid =False
+    while not valid:
+        try:
+            phone_number = input('Введите номер телефона: ')
+            if len(phone_number) != 11:
                 print('В номере телефона должно быть 11 цифр.')
-            ещё:
-                int = номер телефона (phone_number)
-                допустимо  =  истина
-        кроме:
+            else:
+                phone_number = int(phone_number)
+                valid = True
+        except:
             print('Номер телефона должен состоять только из цифр.')
-    информация.добавить(номер телефона)
-    input = description('Введите описание: ')
-    info.добавить(описание)
-    информация о возврате 
+    info.append(phone_number)
+    description = input('Введите описание: ')
+    info.append(description)
+    return 
